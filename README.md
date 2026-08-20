@@ -1,7 +1,16 @@
-NGG-FCLRendererPlugin
+Val-Krypton-Wrapper
 ====
 
-This is the **plugin application** for *Fold Craft Launcher*, *Zalith Launcher* and *Pojav·Glow·Worm* to use Krypton Wrapper.
+> **Public Realme 9i performance fork maintained by [Zaineedyou](https://github.com/Zaineedyou).**
+>
+> This project is developed with implementation and documentation assistance from **Manus AI**. See [AUTHORS.md](AUTHORS.md) for complete attribution.
+
+This is a public fork of the **plugin application** for *Fold Craft Launcher*, *Zalith Launcher*, and *Pojav·Glow·Worm* to use Krypton Wrapper. It preserves upstream licensing and credits while adding tested Realme 9i (Snapdragon 680 / Adreno 610) profiles.
+
+## Current Release
+
+**v0.1.2-brutal-1** is distributed at [`releases/Val-Krypton-Wrapper-v0.1.2-brutal-1.apk`](releases/Val-Krypton-Wrapper-v0.1.2-brutal-1.apk). It uses `LIBGL_SHRINK=1` for an aggressive texture-bandwidth reduction profile. Read [RELEASE_NOTES.md](RELEASE_NOTES.md) before installing.
+
 
 If you want to learn more about **Krypton Wrapper**, please see [NG-GL4ES](https://github.com/BZLZHH/NG-GL4ES).
 

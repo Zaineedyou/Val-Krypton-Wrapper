@@ -14,13 +14,13 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.bzlzhh.plugin.ngg"
+        applicationId = "com.manus.kryptonr9i"
         minSdk = 26
         targetSdk = 34
-        versionCode = 45
-        versionName = "Release 0.4.5"
+        versionCode = 3
+        versionName = "R9i 0.1.2-brutal-1"
 
-        manifestPlaceholders["des"] = "Krypton Wrapper (OpenGL 3.1+)"
+        manifestPlaceholders["des"] = "Krypton Wrapper R9i Performance (OpenGL 3.1+)"
         manifestPlaceholders["renderer"] = "NGGL4ES:libng_gl4es.so:libEGL.so"
         manifestPlaceholders["boatEnv"] = mutableMapOf<String, String>().apply {
             put("LIBGL_USE_MC_COLOR", "1")
@@ -28,6 +28,8 @@ android {
             put("LIBGL_ES", "3")
             put("LIBGL_NORMALIZE", "1")
             put("LIBGL_NOERROR", "1")
+            // Brutal optimization: Downscale all textures by half to save VRAM bandwidth.
+            put("LIBGL_SHRINK", "1")
         }.run {
             var env = ""
             forEach { (key, value) ->
@@ -48,6 +50,7 @@ android {
                     })
 
         buildConfigField("boolean", "useANGLE", "false")
+        buildConfigField("String", "deviceProfile", "\"realme_9i_brutal_1\"")
     }
 
     buildTypes {
@@ -55,7 +58,7 @@ android {
             isMinifyEnabled = false
         }
         configureEach {
-            resValue("string", "app_name", "Krypton Wrapper")
+            resValue("string", "app_name", "Krypton Wrapper R9i")
         }
     }
 
