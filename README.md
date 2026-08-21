@@ -9,7 +9,7 @@ This is a public fork of the **plugin application** for *Fold Craft Launcher*, *
 
 ## Current Release
 
-**v0.1.2-brutal-1** is distributed at [`releases/Val-Krypton-Wrapper-v0.1.2-brutal-1.apk`](releases/Val-Krypton-Wrapper-v0.1.2-brutal-1.apk). It uses `LIBGL_SHRINK=1` for an aggressive texture-bandwidth reduction profile. Read [RELEASE_NOTES.md](RELEASE_NOTES.md) before installing.
+**v0.1.4-brutal-3** is distributed at [`releases/Val-Krypton-Wrapper-v0.1.4-brutal-3.apk`](releases/Val-Krypton-Wrapper-v0.1.4-brutal-3.apk). It retains the `LIBGL_SHRINK=1` texture optimization, disables V-Sync for uncapped frames, and recycles framebuffers to reduce CPU allocation overhead. Read [RELEASE_NOTES.md](RELEASE_NOTES.md) before installing.
 
 
 If you want to learn more about **Krypton Wrapper**, please see [NG-GL4ES](https://github.com/BZLZHH/NG-GL4ES).
