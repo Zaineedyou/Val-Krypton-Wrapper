@@ -17,8 +17,8 @@ android {
         applicationId = "com.manus.kryptonr9i"
         minSdk = 26
         targetSdk = 34
-        versionCode = 6
-        versionName = "R9i 0.1.5-brutal-4"
+        versionCode = 7
+        versionName = "R9i 0.1.6-brutal-5"
 
         manifestPlaceholders["des"] = "Krypton Wrapper R9i Performance (OpenGL 3.1+)"
         manifestPlaceholders["renderer"] = "NGGL4ES:libng_gl4es.so:libEGL.so"
@@ -32,8 +32,8 @@ android {
             put("LIBGL_SHRINK", "1")
             // CPU/GPU Sync optimization: Disable VSync to uncap frames.
             put("LIBGL_VSYNC", "0")
-            // Memory optimization: Force 16-bit texture format to halve VRAM usage.
-            put("LIBGL_FORCE16BITS", "1")
+            // CPU optimization: Enable internal texture copy to speed up texture reads/updates.
+            put("LIBGL_TEXCOPY", "1")
         }.run {
             var env = ""
             forEach { (key, value) ->
@@ -54,7 +54,7 @@ android {
                     })
 
         buildConfigField("boolean", "useANGLE", "false")
-        buildConfigField("String", "deviceProfile", "\"realme_9i_brutal_4\"")
+        buildConfigField("String", "deviceProfile", "\"realme_9i_brutal_5\"")
     }
 
     buildTypes {

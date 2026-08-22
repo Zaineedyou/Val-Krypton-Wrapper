@@ -13,7 +13,8 @@ Build ini ditargetkan untuk **Realme 9i** dengan Snapdragon 680 / Adreno 610, Za
 | `0.1.2-brutal-1` | Menambahkan `LIBGL_SHRINK=1` | FPS 80–100 saat gerak/diam, hingga 180 saat memuat chunk, dan 50–70 FPS di area mob ramai menurut pengujian Zaineedyou. |
 | `0.1.3-brutal-2` | Menambahkan `LIBGL_NOHIGHP=1` | Gagal: Menghancurkan UI, font, dan rendering *entity* menjadi *wireframe* karena Adreno 610 memerlukan presisi `highp` untuk kalkulasi shader. FPS turun menjadi 6–59. |
 | `0.1.4-brutal-3` | `LIBGL_VSYNC=0`, `LIBGL_RECYCLEFBO=1` | Gagal: `LIBGL_RECYCLEFBO=1` menyebabkan crash `SIGSEGV` di `glDeleteFramebuffersEXT` saat memuat atau membersihkan atlas resource pack. |
-| `0.1.5-brutal-4` | `LIBGL_VSYNC=0`, `LIBGL_FORCE16BITS=1` | *Dalam tahap pengujian.* Mempertahankan FPS uncapped dan memaksa format tekstur 16-bit untuk mengurangi penggunaan VRAM tanpa mengubah presisi shader. |
+| `0.1.5-brutal-4` | `LIBGL_VSYNC=0`, `LIBGL_FORCE16BITS=1` | Gagal: Entity menjadi siluet hitam, transparansi rusak, font/UI Meteor korup, FPS turun drastis (6–59). |
+| `0.1.6-brutal-5` | `LIBGL_VSYNC=0`, `LIBGL_TEXCOPY=1` | *Dalam tahap pengujian.* Mengembalikan format tekstur ke 32-bit asli dan mengaktifkan salinan tekstur internal untuk mempercepat proses *upload* ke GPU. |
 
 ## Konfigurasi Uji yang Dilaporkan
 
