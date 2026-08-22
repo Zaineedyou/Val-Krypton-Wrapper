@@ -14,7 +14,8 @@ Build ini ditargetkan untuk **Realme 9i** dengan Snapdragon 680 / Adreno 610, Za
 | `0.1.3-brutal-2` | Menambahkan `LIBGL_NOHIGHP=1` | Gagal: Menghancurkan UI, font, dan rendering *entity* menjadi *wireframe* karena Adreno 610 memerlukan presisi `highp` untuk kalkulasi shader. FPS turun menjadi 6–59. |
 | `0.1.4-brutal-3` | `LIBGL_VSYNC=0`, `LIBGL_RECYCLEFBO=1` | Gagal: `LIBGL_RECYCLEFBO=1` menyebabkan crash `SIGSEGV` di `glDeleteFramebuffersEXT` saat memuat atau membersihkan atlas resource pack. |
 | `0.1.5-brutal-4` | `LIBGL_VSYNC=0`, `LIBGL_FORCE16BITS=1` | Gagal: Entity menjadi siluet hitam, transparansi rusak, font/UI Meteor korup, FPS turun drastis (6–59). |
-| `0.1.6-brutal-5` | `LIBGL_VSYNC=0`, `LIBGL_TEXCOPY=1` | *Dalam tahap pengujian.* Mengembalikan format tekstur ke 32-bit asli dan mengaktifkan salinan tekstur internal untuk mempercepat proses *upload* ke GPU. |
+| `0.1.6-brutal-5` | `LIBGL_VSYNC=0`, `LIBGL_TEXCOPY=1` | Gagal: Crash `SIGSEGV` di `libhwui.so` saat startup akibat kehabisan memori grafis Android karena alokasi ganda untuk resource pack besar. |
+| `0.1.7-baseline` | `LIBGL_VSYNC=0`, `LIBGL_SHRINK=1` | Stabil: Mengembalikan ke konfigurasi aman maksimal (`brutal-1` + V-Sync off) karena seluruh opsi agresif lainnya menyebabkan crash atau regresi visual pada perangkat ini. |
 
 ## Konfigurasi Uji yang Dilaporkan
 
