@@ -18,7 +18,7 @@ android {
         minSdk = 26
         targetSdk = 34
         versionCode = 6
-        versionName = "R9i 0.1.4-brutal-3"
+        versionName = "R9i 0.1.5-brutal-4"
 
         manifestPlaceholders["des"] = "Krypton Wrapper R9i Performance (OpenGL 3.1+)"
         manifestPlaceholders["renderer"] = "NGGL4ES:libng_gl4es.so:libEGL.so"
@@ -32,8 +32,8 @@ android {
             put("LIBGL_SHRINK", "1")
             // CPU/GPU Sync optimization: Disable VSync to uncap frames.
             put("LIBGL_VSYNC", "0")
-            // Memory optimization: Recycle Framebuffer Objects to reduce allocation overhead.
-            put("LIBGL_RECYCLEFBO", "1")
+            // Memory optimization: Force 16-bit texture format to halve VRAM usage.
+            put("LIBGL_FORCE16BITS", "1")
         }.run {
             var env = ""
             forEach { (key, value) ->
@@ -54,7 +54,7 @@ android {
                     })
 
         buildConfigField("boolean", "useANGLE", "false")
-        buildConfigField("String", "deviceProfile", "\"realme_9i_brutal_3\"")
+        buildConfigField("String", "deviceProfile", "\"realme_9i_brutal_4\"")
     }
 
     buildTypes {
